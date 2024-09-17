@@ -4,5 +4,6 @@
     }
 </style>
 
-<h1>HOla desde la vista</h1>
+<h1>SUBTTE. DE POLICIA MILITAR
+    CARPIO GUERRA ROGER RONALDO, Enviando PDF desde correo</h1>
 <img src="cid:hola" alt="Logo Institucional">
