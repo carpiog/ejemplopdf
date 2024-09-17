@@ -26,29 +26,21 @@
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="#"><i class="bi bi-house-fill me-2"></i>INICIO</a>
                     </li>
-  
-                    <div class="nav-item dropdown " >
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                            <i class="bi bi-gear me-2"></i>OPCIONES
-                        </a>
-                        <ul class="dropdown-menu  dropdown-menu-dark "id="dropwdownRevision" style="margin: 0;">
-                            <!-- <h6 class="dropdown-header">Información</h6> -->
-                            <li>
-                                <a class="dropdown-item nav-link text-white " href="email"><i class="ms-lg-0 ms-2 bi bi-plus-circle me-2"></i>EMAIL</a>
-                            </li>
-                        
-                    
-                        
-                        </ul>
-                    </div> 
-
+                </ul> 
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin: 0;">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="email"><i class="bi bi-envelope-at-fill"></i>ENVIAR EMAIL</a>
+                    </li>
+                </ul> 
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin: 0;">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="pdf"><i class="bi bi-filetype-pdf"></i>GENERAR PDF</a>
+                    </li>
                 </ul> 
                 <div class="col-lg-1 d-grid mb-lg-0 mb-2">
                     <!-- Ruta relativa desde el archivo donde se incluye menu.php -->
                     <a href="/menu/" class="btn btn-danger"><i class="bi bi-arrow-bar-left"></i>MENÚ</a>
                 </div>
-
-            
             </div>
         </div>
         
