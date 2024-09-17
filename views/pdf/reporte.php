@@ -12,8 +12,8 @@
         <?php foreach ($productos as $key => $producto): ?>
             <tr>
                 <td><?= $key + 1 ?></td>
-                <td><?= $producto['nombre'] ?> </td>
-                <td><?= $producto['precio'] ?> </td>
+                <td><?= $producto['producto_nombre'] ?> </td>
+                <td><?= $producto['producto_precio'] ?> </td>
             </tr>
         <?php endforeach ?>
     </tbody>

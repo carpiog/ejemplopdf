@@ -1,6 +1,6 @@
 {
-    "name": "ejemplo_pdf",
-    "description": "Aplicacion DEMO DE MPDF",
+    "name": "ronguerra51/ejemplopdf",
+    "description": "Proyecto demo de MPDF",
     "type": "project",
     "config": {
         "platform-check": true,
