@@ -11,6 +11,7 @@ class ReporteController
 {
     public static function pdf(Router $router)
     {
+         // Generar PDF
         $mpdf = new Mpdf(
             [
                 "default_font_size" => "12",
@@ -20,11 +21,14 @@ class ReporteController
                 "format" => "Letter"
             ]
         );
+        // Obtener datos para el PDF
         $productos = ActiveRecord::fetchArray("SELECT * FROM productos");
         $html = $router->load('pdf/reporte', [
             'productos' => $productos
         ]);
+        //funcion para numerar las paginas
         $mpdf->AliasNbPages('[pagetotal]');
+        // Aplicar CSS y generar el cuerpo del PDF
         $css = $router->load('pdf/styles');
         $css = file_get_contents(__DIR__ . '/../views/pdf/styles.css');
         $header = $router->load('pdf/header');

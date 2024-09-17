@@ -25,20 +25,18 @@ class EmailController
 
         try {
             // Configuración del correo
-            $email->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
-            $email->isSMTP();                                            //Send using SMTP
-            $email->Host = $_ENV['MAIL_HOST'];                           //Set the SMTP server to send through
-            $email->SMTPAuth = true;                                     //Enable SMTP authentication
-            $email->Username = $_ENV['MAIL_USERNAME'];                   //SMTP username
-            $email->Password = $_ENV['MAIL_PASSWORD'];                   //SMTP password
-            $email->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+            $email->SMTPDebug = SMTP::DEBUG_SERVER;                      
+            $email->isSMTP();                                            
+            $email->Host = $_ENV['MAIL_HOST'];                          
+            $email->SMTPAuth = true;                                    
+            $email->Username = $_ENV['MAIL_USERNAME'];                   
+            $email->Password = $_ENV['MAIL_PASSWORD'];                   
+            $email->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            
             $email->Port = $_ENV['MAIL_PORT'];
             $email->CharSet = "UTF-8";
             $email->AddReplyTo($_ENV['MAIL_FROM_ADDRESS'], $_ENV['MAIL_FROM_NAME']);
             $email->setFrom($_ENV['MAIL_FROM_ADDRESS'], $_ENV['MAIL_FROM_NAME']);
             $email->isHTML();
-            
-            // Adjuntar imagen
             $imagePath = __DIR__ . '/../public/images/PDF.png';
             $email->AddEmbeddedImage($imagePath, 'hola', 'PDF.png');
             
@@ -69,7 +67,7 @@ class EmailController
             $email->addStringAttachment($pdfOutput, 'reporte.pdf');
 
             // Dirección de destino
-            $email->addAddress('capurivas@gmail.com', 'DANIEL RIVAS');
+            $email->addAddress('abnerfuentes05@gmail.com', 'ABNER FUENTES');
             $email->send();
 
             echo "Correo enviado con el PDF adjunto";
