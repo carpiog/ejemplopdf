@@ -14,9 +14,6 @@ $router->get('/', [AppController::class, 'index']);
 $router->get('/pdf', [ReporteController::class, 'pdf']);
 $router->get('/email', [EmailController::class, 'email']);
 $router->get('/subir', [FTPController::class, 'subir']);
-// $router->post('/API/subir', [FTPController::class, 'subirAPI']);
-$router->post('/API/subir', [FTPController::class, 'subirAPI']);
-$router->get('/mostrar', [FTPController::class, 'mostrar']);
 
 // Comprueba y valida las rutas, que existan y les asigna las funciones del Controlador
 $router->comprobarRutas();
